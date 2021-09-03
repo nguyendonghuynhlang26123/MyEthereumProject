@@ -1,0 +1,64 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^1.4.1",
+    "@heroicons/react": "^1.0.4",
+    "@openzeppelin/contracts": "^4.3.1",
+    "@popperjs/core": "^2.9.3",
+    "@tailwindcss/aspect-ratio": "^0.2.1",
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "@types/jest": "^26.0.24",
+    "@types/node": "^12.20.21",
+    "@types/react": "^17.0.19",
+    "@types/react-dom": "^17.0.9",
+    "canvas": "^2.8.0",
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "ganache-cli": "^6.12.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-popper": "^2.2.5",
+    "react-scripts": "4.0.3",
+    "typescript": "^4.4.2",
+    "web-vitals": "^1.1.2",
+    "web3": "^1.5.2"
+  },
+  "scripts": {
+    "start": "react-scripts start ",
+    "dev:tailwind": "npx tailwindcss -i src/tailwind.css -o src/index.css --watch",
+    "dev:bc": "ganache-cli --accounts 4 -i 6464 --account=\"0xd11e703a71ee71689c1753c7e0b5ecf36a4eae43ae80e3d25d5f6a2febb29584,100000000000000000000\" --account=\"0xbc2d4d5e6dbeb137fd6a46014ce007fd38fddb7b1ff1d35676c3ce202bf449a9,100000000000000000000\" --account=\"0xd6bd8715932a5a773085632525c9d0b6d24047d8ff7c170a526d5cbea9e71504,100000000000000000000\" --account=\"0xfbc6144c225f4e8bf0720e13c652fac0aadf8ab4a5c8da1f5c77d76eb832eedd,100000000000000000000\" --secure --unlock 0",
+    "dev:migrate": "truffle migrate --network development --reset",
+    "dev:gen": "node src/img-gen/index.js",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "concurrently": "^6.2.1",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.8"
+  }
+}
