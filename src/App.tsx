@@ -59,13 +59,8 @@ export const App = () => {
       <div className="flex items-start justify-between">
         <Sidebar items={navitems} currentIndex={index} open={open} />
         <div className="flex flex-col w-full md:space-y-4">
-          <Navbar
-            openSidebar={() => showSidebar((prv) => !prv)}
-            account={state.account}
-          />
-          <div className="overflow-auto h-screen pb-24 px-4 md:px-6">
-            {paging(index)}
-          </div>
+          <Navbar openSidebar={() => showSidebar((prv) => !prv)} account={state.account} />
+          <div className="overflow-auto h-screen pb-24 px-4 md:px-6">{paging(index)}</div>
         </div>
       </div>
     </main>

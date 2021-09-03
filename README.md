@@ -26,19 +26,19 @@ Using `npm install` to install all dependencies
 
 ### Start project
 
-Firstly, because this project was using private blockchain on local network, to start a network: \
+Firstly, because this project was using private blockchain on local network, to start a network: 
 
 ```
   npm run dev:bc
 ```
 
-then we deploy our smart contract to our newly created blockchain network\
+then we deploy our smart contract to our newly created blockchain network
 
 ```
   npm run dev:migrate
 ```
 
-Runs the app in the development mode by using command: \
+Runs the app in the development mode by using command: 
 
 ```
   npm start
@@ -48,7 +48,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
+Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
 ### `npm run build`

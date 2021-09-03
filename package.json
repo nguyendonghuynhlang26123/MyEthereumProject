@@ -6,6 +6,8 @@
     "@headlessui/react": "^1.4.1",
     "@heroicons/react": "^1.0.4",
     "@openzeppelin/contracts": "^4.3.1",
+    "@openzeppelin/contracts-upgradeable": "^4.3.1",
+    "@openzeppelin/truffle-upgrades": "^1.9.1",
     "@popperjs/core": "^2.9.3",
     "@tailwindcss/aspect-ratio": "^0.2.1",
     "@testing-library/jest-dom": "^5.14.1",
