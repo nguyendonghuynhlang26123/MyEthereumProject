@@ -3,7 +3,7 @@ const BreedingScience = artifacts.require('./Penguun/BreedingScience.sol');
 const { deployProxy } = require('@openzeppelin/truffle-upgrades');
 
 module.exports = async function (deployer) {
-  const breedingContract = await deployProxy(BreedingScience, { deployer });
-  console.log('log ~ file: 2_deploy_contracts.js ~ line 7 ~ breedingContract', breedingContract);
-  await deployProxy(Penguun, breedingContract.address, { deployer });
+  const breedingContract = await deployProxy(BreedingScience, [4], { deployer });
+  console.log('Deployed breedingContract: ', breedingContract.address);
+  await deployProxy(Penguun, [breedingContract.address], { deployer });
 };

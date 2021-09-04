@@ -21,7 +21,14 @@ contract PenguunCore is ERC721Enumerable {
         PenguunGender gender;
     }
     Penguun[] penguuns;
-    uint256 defaultReadyTime = 1 hours;
+    uint256 defaultReadyTime;
+
+    bool debugMode; // TEST ONLY, allow to breed easily
+
+    //LIMITER
+    uint64 breedCountLimit; /// TODO: Should we add limit to number of breeds ?
+    uint64 expLimit; // Maximum exp a penguun can gain
+    uint64 expPerBreedCount; // Maximum exp a penguun can gain
 
     event PenguunSpawned(
         uint256 indexed penguunId,
@@ -41,13 +48,14 @@ contract PenguunCore is ERC721Enumerable {
         //Since openzeppelin upgradable proxy won't allow constructor
         super.erc721_initialize("Penguun", "PGN");
 
-        _createPenguun(0, 0, 0, 0, "Puff", PenguunGender.BISEX, address(0)); //Void penguun
+        //Test mode
+        debugMode = false; // TEST ONLY, allow to breed easily
 
-        //Ancestors
-        _createPenguun(0, 0, 0, 0, "Puff", PenguunGender.FEMALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Kotaro", PenguunGender.FEMALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Ginger", PenguunGender.MALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Stella", PenguunGender.MALE, msg.sender);
+        //LIMITER
+        breedCountLimit = 64; /// TODO: Should we add limit to number of breeds ?
+        expLimit = 10_000_000; // Maximum exp a penguun can gain
+        expPerBreedCount = 1000; // Maximum exp a penguun can gain
+        defaultReadyTime = 1 hours;
     }
 
     function getMyPenguunIds() external view returns (uint256[] memory result) {
@@ -118,6 +126,7 @@ contract PenguunCore is ERC721Enumerable {
         return _penguunId > 0 && _penguunId < penguuns.length; // Out-of-bound check
     }
 
+    /// @notice A function to change penguun name
     function changePenguunName(uint64 _penguunId, bytes32 _name)
         external
         onlyTokenOwner(_penguunId)

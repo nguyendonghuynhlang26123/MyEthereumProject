@@ -1,6 +1,7 @@
 {
-  "name": "my-app",
+  "name": "my-ethereum-project",
   "version": "0.1.0",
+  "author": "Nguyen Dang Huynh Long",
   "private": true,
   "dependencies": {
     "@headlessui/react": "^1.4.1",
@@ -33,7 +34,7 @@
     "start": "react-scripts start ",
     "dev:tailwind": "npx tailwindcss -i src/tailwind.css -o src/index.css --watch",
     "dev:bc": "ganache-cli --accounts 4 -i 6464 --account=\"0xd11e703a71ee71689c1753c7e0b5ecf36a4eae43ae80e3d25d5f6a2febb29584,100000000000000000000\" --account=\"0xbc2d4d5e6dbeb137fd6a46014ce007fd38fddb7b1ff1d35676c3ce202bf449a9,100000000000000000000\" --account=\"0xd6bd8715932a5a773085632525c9d0b6d24047d8ff7c170a526d5cbea9e71504,100000000000000000000\" --account=\"0xfbc6144c225f4e8bf0720e13c652fac0aadf8ab4a5c8da1f5c77d76eb832eedd,100000000000000000000\" --secure --unlock 0",
-    "dev:migrate": "truffle migrate --network development --reset",
+    "dev:migrate": "truffle migrate --network development --compile-all",
     "dev:gen": "node src/img-gen/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

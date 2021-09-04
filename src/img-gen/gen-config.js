@@ -1,14 +1,4 @@
-const layersOrder = [
-  'bg',
-  'tail',
-  'back',
-  'fur',
-  'belly',
-  'eyes',
-  'mouth',
-  'ribbon',
-  'horn',
-];
+const layersOrder = ['bg', 'tail', 'back', 'fur', 'belly', 'eyes', 'mouth', 'ribbon', 'horn'];
 
 const position = {
   'bg': [0, 0],

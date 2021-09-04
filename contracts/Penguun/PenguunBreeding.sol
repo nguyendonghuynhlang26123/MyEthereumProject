@@ -6,7 +6,7 @@ import "../dependencies/Ownable.sol";
 //In production, we should hide the implementation of this contract.
 interface BreedingScienceInterface {
     // Simply a boolean to indicate this is the contract we expect to be (why? idk, just saw cryptokitty do this: https://gist.github.com/arpit/071e54b95a81d13cb29681407680794f)
-    function isBreedingScience() external pure returns (bool);
+    function isBreedingScience() external returns (bool);
 
     /// @notice a function to calculate breeding of 2 penguun
     /// @param dna1 dna of father
@@ -33,14 +33,9 @@ interface BreedingScienceInterface {
     function randomGender() external returns (uint8);
 }
 
+/// @dev A contract that handle breeding logics
 contract PenguunBreeding is PenguunCore, Ownable {
     BreedingScienceInterface public breedingScience;
-    bool debugMode = false; // TEST ONLY, allow to breed easily
-
-    //LIMITER
-    uint64 public breedCountLimit = 64; /// TODO: Should we add limit to number of breeds ?
-    uint64 public expLimit = 10_000_000; // Maximum exp a penguun can gain
-    uint64 public expPerBreedCount = 1000; // Maximum exp a penguun can gain
 
     event BreedingEvent(
         uint256 indexed papaId,
@@ -62,11 +57,20 @@ contract PenguunBreeding is PenguunCore, Ownable {
         breedingScience = candidateContract;
     }
 
+    /// @notice initialize function for upgradable contract
     function initialize(address _address) public initializer {
         //Since openzeppelin upgradable proxy won't allow constructor
         super.ownable_init();
-        super.initialize();
-        this.setBreedingScienceAddress(_address);
+        super.erc721_initialize("Penguun the penguin", "PENGUUN");
+        breedingScience = BreedingScienceInterface(_address);
+
+        penguuns.push(Penguun(0, 0, 0, 0, 0, 0, 0, 0, "", PenguunGender.BISEX)); //Void penguun
+
+        //Ancestors: 4 legendary penguuns
+        _createPenguun(0, 0, 0, 0, "Puff", PenguunGender.FEMALE, msg.sender);
+        _createPenguun(0, 0, 0, 0, "Kotaro", PenguunGender.FEMALE, msg.sender);
+        _createPenguun(0, 0, 0, 0, "Ginger", PenguunGender.MALE, msg.sender);
+        _createPenguun(0, 0, 0, 0, "Stella", PenguunGender.MALE, msg.sender);
     }
 
     /// @notice Checks that the given penguun egg is hatched
@@ -77,7 +81,6 @@ contract PenguunBreeding is PenguunCore, Ownable {
         return penguun.hatchedAt >= block.timestamp;
     }
 
-    /// @notice Checks that the given penguun is able to breed
     function isReadyToBreed(uint256 _penguunId) public view returns (bool) {
         require(_penguunId > 0);
         Penguun storage penguun = penguuns[_penguunId];
