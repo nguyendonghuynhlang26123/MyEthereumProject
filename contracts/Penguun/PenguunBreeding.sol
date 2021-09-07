@@ -58,7 +58,11 @@ contract PenguunBreeding is PenguunCore, Ownable {
     }
 
     /// @notice initialize function for upgradable contract
-    function initialize(address _address) public initializer {
+    function initialize(address _address, address _owner)
+        public
+        virtual
+        initializer
+    {
         //Since openzeppelin upgradable proxy won't allow constructor
         super.ownable_init();
         super.erc721_initialize("Penguun the penguin", "PENGUUN");
@@ -67,10 +71,42 @@ contract PenguunBreeding is PenguunCore, Ownable {
         penguuns.push(Penguun(0, 0, 0, 0, 0, 0, 0, 0, "", PenguunGender.BISEX)); //Void penguun
 
         //Ancestors: 4 legendary penguuns
-        _createPenguun(0, 0, 0, 0, "Puff", PenguunGender.FEMALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Kotaro", PenguunGender.FEMALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Ginger", PenguunGender.MALE, msg.sender);
-        _createPenguun(0, 0, 0, 0, "Stella", PenguunGender.MALE, msg.sender);
+        _createPenguun(
+            909190909090909090,
+            0,
+            0,
+            0,
+            "ELIZABETH",
+            PenguunGender.BISEX,
+            _owner
+        );
+        _createPenguun(
+            781172020206777775,
+            0,
+            0,
+            0,
+            "Sena",
+            PenguunGender.FEMALE,
+            _owner
+        );
+        _createPenguun(
+            700245474007440747,
+            0,
+            0,
+            0,
+            "Ginger",
+            PenguunGender.MALE,
+            _owner
+        );
+        _createPenguun(
+            24043130101170350,
+            0,
+            0,
+            0,
+            "Stella",
+            PenguunGender.MALE,
+            _owner
+        );
     }
 
     /// @notice Checks that the given penguun egg is hatched
@@ -82,7 +118,6 @@ contract PenguunBreeding is PenguunCore, Ownable {
     }
 
     function isReadyToBreed(uint256 _penguunId) public view returns (bool) {
-        require(_penguunId > 0);
         Penguun storage penguun = penguuns[_penguunId];
 
         return
@@ -131,7 +166,7 @@ contract PenguunBreeding is PenguunCore, Ownable {
         returns (bool)
     {
         require(_maleId != _femaleId);
-        require(_isValidId(_maleId) && _isValidId(_femaleId));
+        require(_isValidId(_maleId) && _isValidId(_femaleId), "Invalid id");
         if (debugMode) return true;
 
         Penguun storage male = penguuns[_maleId];
@@ -213,8 +248,11 @@ contract PenguunBreeding is PenguunCore, Ownable {
         uint64 _femaleId,
         bytes32 _childName
     ) external payable onlyTokenOwner(_maleId) onlyTokenOwner(_femaleId) {
+        uint256 fee = 2000000000000000 wei;
+        require(msg.value >= fee, "Insufficient fee value");
+
         //Sanity check tokens
-        require(canBreedWith(_maleId, _femaleId));
+        require(canBreedWith(_maleId, _femaleId), "Inappropriate pair");
 
         //Sanity check ERC20 token <- TODO: use ERC token as fee to breed instead!
         _breedWith(_maleId, _femaleId, _childName, _msgSender());

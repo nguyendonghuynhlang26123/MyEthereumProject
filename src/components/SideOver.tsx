@@ -6,7 +6,8 @@ import { Context } from './contexts/ContractDataContext';
 import { addressTrimMiddle } from '../utils';
 
 export function SideOver({ open, setOpen, children }) {
-  const { account, balance } = useContext(Context);
+  const { account, balance, faucetContract, web3, reloadAccount } = useContext(Context);
+  console.log('log ~ file: SideOver.tsx ~ line 10 ~ SideOver ~ faucetContract', faucetContract);
   function fallbackCopyTextToClipboard(text) {
     var textArea = document.createElement('textarea');
     textArea.value = text;
@@ -45,13 +46,22 @@ export function SideOver({ open, setOpen, children }) {
     );
   }
 
+  const sendMeEther = () => {
+    const amount = web3.utils.toWei('5', 'ether');
+    console.log('log ~ file: SideOver.tsx ~ line 51 ~ sendMeEther ~ amount', amount);
+    faucetContract.methods
+      .withdraw(web3.utils.toWei('5', 'ether'))
+      .send({ from: account })
+      .then((res) => {
+        console.log('log ~ file: SideOver.tsx ~ line 56 ~ .then ~ res', res);
+        if (reloadAccount) reloadAccount();
+        alert('Operation succeeeded!');
+      });
+  };
+
   return (
     <Transition.Root show={open} as={Fragment}>
-      <Dialog
-        as="div"
-        className="fixed inset-0 overflow-hidden"
-        onClose={setOpen}
-      >
+      <Dialog as="div" className="fixed inset-0 overflow-hidden" onClose={setOpen}>
         <div className="absolute inset-0 overflow-hidden">
           <Transition.Child
             as={Fragment}
@@ -91,46 +101,28 @@ export function SideOver({ open, setOpen, children }) {
                       onClick={() => setOpen(false)}
                     >
                       <span className="sr-only">Close panel</span>
-                      <XIcon
-                        className="h-6 w-6 focus:outline-none"
-                        aria-hidden="true"
-                      />
+                      <XIcon className="h-6 w-6 focus:outline-none" aria-hidden="true" />
                     </button>
                   </div>
                 </Transition.Child>
                 <div className="h-full flex flex-col bg-white shadow-xl overflow-y-scroll">
                   <div className="p-4 sm:px-6 flex justify-between items-center flex-row border-b border-gray-200">
-                    <Dialog.Title className="text-lg font-medium text-gray-900 ">
-                      My wallet
-                    </Dialog.Title>
-                    <button
-                      className="text-gray-500 flex flex-row gap-1 items-center"
-                      onClick={() => {}}
-                    >
+                    <Dialog.Title className="text-lg font-medium text-gray-900 ">My wallet</Dialog.Title>
+                    <button className="text-gray-500 flex flex-row gap-1 items-center" onClick={() => {}}>
                       {account && addressTrimMiddle(account)}
-                      <DocumentDuplicateIcon
-                        width="16"
-                        className="text-gray-600 "
-                      />
+                      <DocumentDuplicateIcon width="16" className="text-gray-600 " />
                     </button>
                   </div>
                   <div className="mt-6 relative flex-1 px-4 sm:px-6">
                     {/* Replace with your content */}
                     <div className="absolute inset-0 px-4 sm:px-6">
-                      <div
-                        className="border border-gray-300 flex flex-col  rounded-lg overflow-hidden"
-                        aria-hidden="true"
-                      >
+                      <div className="border border-gray-300 flex flex-col  rounded-lg overflow-hidden" aria-hidden="true">
                         <div className="py-3 flex flex-col justify-center items-center gap-0">
-                          <p className="text-md font-semibold text-gray-400">
-                            ETH Total balance
-                          </p>
-                          <p className="text-2xl font-bold text-gray-800">
-                            {balance} ETH
-                          </p>
+                          <p className="text-md font-semibold text-gray-400">ETH Total balance</p>
+                          <p className="text-2xl font-bold text-gray-800">{balance} ETH</p>
                         </div>
-                        <button className="text-lg bg-main text-white py-2 font-bold ">
-                          Add funds
+                        <button onClick={sendMeEther} className="text-lg cursor-pointer bg-gray-200 hover:bg-gray-300 py-2 font-bold ">
+                          Send me 5 ether
                         </button>
                       </div>
                     </div>

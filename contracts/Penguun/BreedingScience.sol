@@ -21,7 +21,7 @@ contract BreedingScience is Initializable, Ownable {
     /// @notice a function to calculate the ready time for another breeding
     /// @param breedCount penguun breed count
     function breedingTime(uint64 breedCount) external pure returns (uint256) {
-        return breedCount * (1 seconds);
+        return breedCount * (15 seconds);
     }
 
     /// @notice a function to calculate when the penguun egg will hatch
@@ -32,7 +32,7 @@ contract BreedingScience is Initializable, Ownable {
         pure
         returns (uint256)
     {
-        return parentBreedingCountAvg * (1 seconds);
+        return parentBreedingCountAvg * (15 seconds);
     }
 
     /// @notice generate random number from 0 -> 2 stands for { FEMALE, MALE, BISEX }
@@ -209,7 +209,7 @@ contract BreedingScience is Initializable, Ownable {
             resultParts = _mutate(resultParts);
         }
         // More mutation in dna
-        resultParts = _rarityMutateHandle(resultParts, expAvg);
+        //resultParts = _rarityMutateHandle(resultParts, expAvg);
 
         // Join them all and return
         return _partsToDNA(resultParts);

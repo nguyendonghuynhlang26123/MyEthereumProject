@@ -1,0 +1,1736 @@
+{
+  "generatorConfig": {
+    "layersOrder": ["bg", "tail", "back", "fur", "belly", "eyes", "mouth", "bow", "horn"],
+    "layersPosition": {
+      "bg": [0, 0],
+      "tail": [428, 385],
+      "back": [303, 30],
+      "fur": [0, 0],
+      "belly": [0, 0],
+      "eyes": [48, 204],
+      "mouth": [119, 272],
+      "bow": [120, 362],
+      "horn": [111, 46]
+    },
+    "layersSize": {
+      "bg": [700, 600],
+      "tail": [250, 150],
+      "back": [215, 222],
+      "fur": [700, 600],
+      "belly": [700, 600],
+      "eyes": [240, 100],
+      "mouth": [80, 90],
+      "bow": [70, 60],
+      "horn": [170, 150]
+    },
+    "globalFormat": {
+      "width": 700,
+      "height": 600,
+      "fileExtension": "png"
+    }
+  },
+  "rarity": {
+    "back": {
+      "total": 48,
+      "common": 19,
+      "rare": 13,
+      "epic": 10,
+      "legendary": 6
+    },
+    "belly": {
+      "total": 11,
+      "common": 4,
+      "rare": 3,
+      "epic": 2,
+      "legendary": 3
+    },
+    "bg": {
+      "total": 39,
+      "common": 17,
+      "rare": 11,
+      "epic": 8,
+      "legendary": 3
+    },
+    "eyes": {
+      "total": 34,
+      "common": 10,
+      "rare": 11,
+      "epic": 6,
+      "legendary": 3
+    },
+    "fur": {
+      "total": 11,
+      "common": 20,
+      "rare": 0,
+      "epic": 0,
+      "legendary": 1
+    },
+    "horn": {
+      "total": 48,
+      "common": 20,
+      "rare": 13,
+      "epic": 10,
+      "legendary": 5
+    },
+    "mouth": {
+      "total": 23,
+      "common": 10,
+      "rare": 6,
+      "epic": 5,
+      "legendary": 1
+    },
+    "bow": {
+      "total": 15,
+      "common": 12,
+      "rare": 1,
+      "epic": 1,
+      "legendary": 0
+    },
+    "tail": {
+      "total": 47,
+      "common": 20,
+      "rare": 13,
+      "epic": 10,
+      "legendary": 4
+    }
+  },
+  "partsList": {
+    "back": [
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "No back"
+      },
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "Crystal Hermit "
+      },
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "92",
+        "partName": "Starry Balloon"
+      },
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "93",
+        "partName": "Hasagi"
+      },
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "94",
+        "partName": "Hamaya"
+      },
+      {
+        "type": "back",
+        "rarity": "legendary",
+        "partId": "95",
+        "partName": "starry shell"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "Indian star"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "Hermit"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "72",
+        "partName": "cupid back"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "73",
+        "partName": "origami wings"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "74",
+        "partName": "king wings"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "75",
+        "partName": "spiky wings"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "76",
+        "partName": "Scarab"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "77",
+        "partName": "pumkin back"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "78",
+        "partName": "watering can"
+      },
+      {
+        "type": "back",
+        "rarity": "epic",
+        "partId": "79",
+        "partName": "Rugged sail"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "candy cane"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "croc back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "green thorn"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "43",
+        "partName": "garish worm back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "44",
+        "partName": "furball back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "45",
+        "partName": "turnip back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "46",
+        "partName": "jaguar back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "47",
+        "partName": "sandal"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "48",
+        "partName": "tri feather"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "49",
+        "partName": "Perch back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "50",
+        "partName": "Yakitori back"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "51",
+        "partName": "raven wings"
+      },
+      {
+        "type": "back",
+        "rarity": "rare",
+        "partId": "52",
+        "partName": "mint back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "Anemone back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "baloon"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "flower"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "indian star outline"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "letter"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "blue scale"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "bone sail"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "ronin"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "turtle shell"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "bunny ears"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "10",
+        "partName": "Shiitake back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "11",
+        "partName": "arrow back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "12",
+        "partName": "gold fish back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "13",
+        "partName": "hairy back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "14",
+        "partName": "pink turnip back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "15",
+        "partName": "snail shell back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "16",
+        "partName": "sponge back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "17",
+        "partName": "timber back"
+      },
+      {
+        "type": "back",
+        "rarity": "common",
+        "partId": "18",
+        "partName": "spike back"
+      }
+    ],
+    "belly": [
+      {
+        "type": "belly",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "no belly"
+      },
+      {
+        "type": "belly",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "star"
+      },
+      {
+        "type": "belly",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "blue"
+      },
+      {
+        "type": "belly",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "green"
+      },
+      {
+        "type": "belly",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "cyan"
+      },
+      {
+        "type": "belly",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "green-2"
+      },
+      {
+        "type": "belly",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "orange"
+      },
+      {
+        "type": "belly",
+        "rarity": "common",
+        "partId": "0"
+      },
+      {
+        "type": "belly",
+        "rarity": "common",
+        "partId": "1"
+      },
+      {
+        "type": "belly",
+        "rarity": "common",
+        "partId": "2"
+      },
+      {
+        "type": "belly",
+        "rarity": "common",
+        "partId": "3"
+      }
+    ],
+    "bg": [
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "4"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "5"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "6"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "7"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "8"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "9"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "10"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "11"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "12"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "13"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "14"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "15"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "16"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "17"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "18"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "19"
+      },
+      {
+        "type": "bg",
+        "rarity": "common",
+        "partId": "20"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "40"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "41"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "42"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "43"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "44"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "45"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "46"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "47"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "48"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "49"
+      },
+      {
+        "type": "bg",
+        "rarity": "rare",
+        "partId": "50"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "70"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "71"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "72"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "73"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "74"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "75"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "76"
+      },
+      {
+        "type": "bg",
+        "rarity": "epic",
+        "partId": "77"
+      },
+      {
+        "type": "bg",
+        "rarity": "legendary",
+        "partId": "90"
+      },
+      {
+        "type": "bg",
+        "rarity": "legendary",
+        "partId": "91"
+      },
+      {
+        "type": "bg",
+        "rarity": "legendary",
+        "partId": "92"
+      }
+    ],
+    "eyes": [
+      {
+        "type": "eyes",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "Elizabeth eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "Dokuganryu eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "legendary",
+        "partId": "92",
+        "partName": "Scar eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "Bookworm"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "Crymson eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "72",
+        "partName": "Clear eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "73",
+        "partName": "Yen eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "74",
+        "partName": "Zeal eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "epic",
+        "partId": "75",
+        "partName": "Sky mavis eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "Calico Zeal eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "Confused eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "Chuppy eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "43",
+        "partName": "Cucumber eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "44",
+        "partName": "Dreammy eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "45",
+        "partName": "Geeko eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "46",
+        "partName": "Kabuki eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "47",
+        "partName": "Kotaro eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "48",
+        "partName": "Insomnia eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "49",
+        "partName": "Snowflake eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "rare",
+        "partId": "50",
+        "partName": "puppy eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "Broken bookworm glasses"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "gero eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "owl eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "pea eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "locas eye"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "mavis eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "neo eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "nerdy eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "robin eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "Sleepless eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "10",
+        "partName": "telescope eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "11",
+        "partName": "topaz eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "12",
+        "partName": "tricky eyes"
+      },
+      {
+        "type": "eyes",
+        "rarity": "common",
+        "partId": "13",
+        "partName": "blossom eyes"
+      }
+    ],
+    "fur": [
+      {
+        "type": "fur",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "Elizabeth fur"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "Blue"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "Cyan"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "grey"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "green"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "orange"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "pinky"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "purple"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "red"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "teal"
+      },
+      {
+        "type": "fur",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "yellow"
+      }
+    ],
+    "horn": [
+      {
+        "type": "horn",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "No horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "Golden egg horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "legendary",
+        "partId": "92",
+        "partName": "Golden bamboo horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "legendary",
+        "partId": "93",
+        "partName": "Parasite alien horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "legendary",
+        "partId": "94",
+        "partName": "Kendama horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "Pinku unko"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "Winter horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "72",
+        "partName": "Candy Babylonia horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "73",
+        "partName": "Umaibo horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "74",
+        "partName": "egg shell"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "75",
+        "partName": "clam shell"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "76",
+        "partName": "Cerastes horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "77",
+        "partName": "attena horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "78",
+        "partName": "rose bud horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "epic",
+        "partId": "79",
+        "partName": "cactus horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "arco horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "Babylonia horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "Bumpy_horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "43",
+        "partName": "catepillar horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "44",
+        "partName": "Dual Blade horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "45",
+        "partName": "Incisor horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "46",
+        "partName": "Laggingggggg horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "47",
+        "partName": "Leaf Bug horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "48",
+        "partName": "Little Branch horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "49",
+        "partName": "Merry horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "50",
+        "partName": "Pliers horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "51",
+        "partName": "Scaly Spoon horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "rare",
+        "partId": "52",
+        "partName": "Wings horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "Anemone horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "Bamboo horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "beech horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "coocku horn "
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "Feather Spear horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "Yorishiro_horn_plant"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "watermelon horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "unko "
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "Trump horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "Teal Shell horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "10",
+        "partName": "Strawberry Shortcake horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "11",
+        "partName": "Spruce Spear horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "12",
+        "partName": "Shoal Star horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "13",
+        "partName": "Scaly Spear horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "14",
+        "partName": "Pocky horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "15",
+        "partName": "parasite horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "16",
+        "partName": "Oranda horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "17",
+        "partName": "Lagging horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "18",
+        "partName": "Kestrel horn"
+      },
+      {
+        "type": "horn",
+        "rarity": "common",
+        "partId": "19",
+        "partName": "Imp horn"
+      }
+    ],
+    "mouth": [
+      {
+        "type": "mouth",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "elizabeth mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "Clown mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "Parrot mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "Cat mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "epic",
+        "partId": "72",
+        "partName": "Lam Handsome mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "epic",
+        "partId": "73",
+        "partName": "Fish mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "epic",
+        "partId": "74",
+        "partName": "Hungry mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "Pigeon mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "owl mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "silence mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "43",
+        "partName": "risky fish mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "44",
+        "partName": "goda mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "rare",
+        "partId": "45",
+        "partName": "razor bite mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "serious mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "confident mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "kiss mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "nervous mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "zigzag mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "angry mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "cute mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "bug teeth mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "leaf eating mouth"
+      },
+      {
+        "type": "mouth",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "lam mouth"
+      }
+    ],
+    "bow": [
+      {
+        "type": "bow",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "red leaf bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "no bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "yellow leaf bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "green leaf bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "white veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "black veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "blue veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "brown veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "cyan veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "dark blue veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "green veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "orange veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "pinky veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "purple veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "10",
+        "partName": "red veston bow"
+      },
+      {
+        "type": "bow",
+        "rarity": "common",
+        "partId": "11",
+        "partName": "skin veston bow"
+      }
+    ],
+    "tail": [
+      {
+        "type": "tail",
+        "rarity": "legendary",
+        "partId": "90",
+        "partName": "no-tail "
+      },
+      {
+        "type": "tail",
+        "rarity": "legendary",
+        "partId": "91",
+        "partName": "Namek Carrot"
+      },
+      {
+        "type": "tail",
+        "rarity": "legendary",
+        "partId": "92",
+        "partName": "Wall Gecko"
+      },
+      {
+        "type": "tail",
+        "rarity": "legendary",
+        "partId": "93",
+        "partName": "black koi tail"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "70",
+        "partName": "Koinobori"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "71",
+        "partName": "Fire Ant"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "72",
+        "partName": "Snowy Swallow"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "73",
+        "partName": "Cloud"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "74",
+        "partName": "Gravel Ant"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "75",
+        "partName": "Shiba"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "76",
+        "partName": "Nut Cracker"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "77",
+        "partName": "Gila"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "78",
+        "partName": "The Last One"
+      },
+      {
+        "type": "tail",
+        "rarity": "epic",
+        "partId": "79",
+        "partName": "Omatsuri"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "40",
+        "partName": "Koi"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "41",
+        "partName": "Maki"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "42",
+        "partName": "Escaped Gecko"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "43",
+        "partName": "Hot Butt"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "44",
+        "partName": "December Surprise"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "45",
+        "partName": "Hare"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "46",
+        "partName": "Shrimp"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "47",
+        "partName": "Sakura Cottontail"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "48",
+        "partName": "Navaga"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "49",
+        "partName": "Post Fight"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "50",
+        "partName": "Tiny Dino"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "51",
+        "partName": "Swallow"
+      },
+      {
+        "type": "tail",
+        "rarity": "rare",
+        "partId": "52",
+        "partName": "Tadpole"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "0",
+        "partName": "Ant"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "1",
+        "partName": "Yam"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "2",
+        "partName": "Twin Tail"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "3",
+        "partName": "Nimo"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "4",
+        "partName": "Iguana"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "5",
+        "partName": "Potato Leaf"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "6",
+        "partName": "Snake Jar"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "7",
+        "partName": "Thorny Cattepilar"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "8",
+        "partName": "Rice"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "9",
+        "partName": "Fish Snack"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "10",
+        "partName": "Gerbil"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "11",
+        "partName": "Fan"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "12",
+        "partName": "Grass Snake"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "13",
+        "partName": "Pupae"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "14",
+        "partName": "Hatsune"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "15",
+        "partName": "Ranchu"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "16",
+        "partName": "Cottontail"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "17",
+        "partName": "Carrot"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "18",
+        "partName": "Cattail"
+      },
+      {
+        "type": "tail",
+        "rarity": "common",
+        "partId": "19",
+        "partName": "Feather Fan"
+      }
+    ]
+  }
+}

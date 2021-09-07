@@ -1,12 +1,12 @@
-const FlappyBird = artifacts.require('./FlappyBird');
+const Penguun = artifacts.require('./Penguun');
 
 require('chai').use(require('chai-as-promised')).should();
 
-contract('FlappyBird', async (accounts) => {
+contract('Penguun', async (accounts) => {
   let contract;
 
   before(async () => {
-    contract = await FlappyBird.deployed();
+    contract = await Penguun.deployed('0x5ed8028d2DEbEa22Dd21d6f21d907f2EaFdb947E');
   });
 
   describe('deployment', async () => {
@@ -17,36 +17,28 @@ contract('FlappyBird', async (accounts) => {
 
     it('has correct token name', async () => {
       const name = await contract.name();
-      assert.equal(name, 'FlappyBirdNFT');
+      assert.equal(name, 'Penguun the penguin');
     });
 
     it('has correct token symbol', async () => {
       const symbol = await contract.symbol();
-      assert.equal(symbol, 'FPB');
+      assert.equal(symbol, 'PENGUUN');
+    });
+  });
+
+  describe('get ids', async () => {
+    it('should return 4 penguun ids', async () => {
+      const result = await contract.getMyPenguunIds({ from: accounts[0] });
+      console.log(accounts[0]);
+      assert.equal(result.length, 4);
     });
   });
 
   describe('minting', async () => {
-    it('create a new token', async () => {
-      await contract.mint(123);
-      const balance = await contract.balanceOf(accounts[0]);
+    it('create a new token', async () => {});
 
-      assert.equal(balance, 1);
-    });
+    it('should be rejected: Token existed', async () => {});
 
-    it('should be rejected: Token existed', async () => {
-      await contract.mint(123).should.be.rejected;
-    });
-
-    it('indexing', async () => {
-      await contract.mint(456);
-      await contract.mint(789);
-      const result = await contract.getBirds();
-      assert.equal(result.length, 3);
-      assert.equal(
-        result.map((r) => r.words[0]),
-        [123, 456, 789]
-      );
-    });
+    it('indexing', async () => {});
   });
 });

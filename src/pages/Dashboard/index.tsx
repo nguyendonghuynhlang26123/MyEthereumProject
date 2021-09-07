@@ -3,19 +3,34 @@ import { GeneralInfo } from './GeneralInfo';
 import { TxHistoryCard } from '../../components/TxHistoryCard';
 import { ClockIcon } from '@heroicons/react/outline';
 import * as ContractContext from '../../components/contexts/ContractDataContext';
+import { TransactionHistory } from './TransactionHistory';
 
 export const Dashboard = () => {
-  const { balance, ..._ } = React.useContext(ContractContext.Context);
+  const { balance, nftContract, account, web3 } = React.useContext(ContractContext.Context);
+  const [state, setState] = React.useState({
+    myBalance: 0,
+    myNFTs: 0,
+    myLHC: 0,
+  });
 
+  React.useEffect(() => {
+    if (nftContract)
+      nftContract.methods
+        .getMyPenguunIds()
+        .call({ from: account })
+        .then((res) => {
+          setState((prv) => ({
+            ...prv,
+            myBalance: balance,
+            myNFTs: res,
+          }));
+        });
+  }, [web3]);
   return (
     <>
-      <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">
-        Hello Long
-      </h1>
-      <h2 className="text-md text-gray-400">
-        Here&#x27;s are your side projects statistic
-      </h2>
-      <GeneralInfo myBalance={balance} />
+      <h1 className="text-4xl font-semibold text-gray-800 dark:text-white">Hello Long</h1>
+      <h2 className="text-md text-gray-400">Here&#x27;s are your side projects statistic</h2>
+      <GeneralInfo {...state} />
       <div className="flex items-center space-x-4">
         <button className="flex items-center gap-2 text-gray-400 text-md border-gray-300 border px-4 py-2 rounded-tl-sm rounded-bl-full rounded-r-full">
           <ClockIcon width="24" />
@@ -31,6 +46,7 @@ export const Dashboard = () => {
           from="0x67baa466eacf6d60cc822749acdef115470f219c"
           to="0xdac17f958d2ee523a2206206994597c13d831ec7"
         />
+        <TransactionHistory />
       </div>
     </>
   );

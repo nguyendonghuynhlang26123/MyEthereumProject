@@ -1,15 +1,7 @@
 const fs = require('fs');
 const { createCanvas, loadImage } = require('canvas');
 const console = require('console');
-const {
-  layersOrder,
-  format,
-  rarity,
-  inputDir,
-  outputDir,
-  position,
-  size,
-} = require('./gen-config.js');
+const { layersOrder, format, rarity, inputDir, outputDir, position, size } = require('./gen-config.js');
 
 const canvas = createCanvas(format.width, format.height);
 const ctx = canvas.getContext('2d');
@@ -79,10 +71,7 @@ const buildSetup = () => {
 };
 
 const saveLayer = (_canvas, _edition) => {
-  fs.writeFileSync(
-    `${buildDir}/${_edition}.png`,
-    _canvas.toBuffer('image/png')
-  );
+  fs.writeFileSync(`${buildDir}/${_edition}.png`, _canvas.toBuffer('image/png'));
 };
 
 const addMetadata = (_edition) => {
@@ -114,18 +103,11 @@ const addAttributes = (_element, _layer) => {
 };
 
 const drawLayer = async (_layer, _edition) => {
-  let element =
-    _layer.elements[Math.floor(Math.random() * _layer.elements.length)];
+  let element = _layer.elements[Math.floor(Math.random() * _layer.elements.length)];
   addAttributes(element, _layer);
   const image = await loadImage(`${_layer.location}${element.fileName}`);
 
-  ctx.drawImage(
-    image,
-    _layer.position.x,
-    _layer.position.y,
-    _layer.size.width,
-    _layer.size.height
-  );
+  ctx.drawImage(image, _layer.position.x, _layer.position.y, _layer.size.width, _layer.size.height);
   saveLayer(canvas, _edition);
 };
 

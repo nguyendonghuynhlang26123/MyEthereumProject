@@ -44,20 +44,6 @@ contract PenguunCore is ERC721Enumerable {
         _;
     }
 
-    function initialize() public initializer {
-        //Since openzeppelin upgradable proxy won't allow constructor
-        super.erc721_initialize("Penguun", "PGN");
-
-        //Test mode
-        debugMode = false; // TEST ONLY, allow to breed easily
-
-        //LIMITER
-        breedCountLimit = 64; /// TODO: Should we add limit to number of breeds ?
-        expLimit = 10_000_000; // Maximum exp a penguun can gain
-        expPerBreedCount = 1000; // Maximum exp a penguun can gain
-        defaultReadyTime = 1 hours;
-    }
-
     function getMyPenguunIds() external view returns (uint256[] memory result) {
         uint256 len = balanceOf(msg.sender);
         result = new uint256[](len);
@@ -78,7 +64,8 @@ contract PenguunCore is ERC721Enumerable {
             uint64 breedCount,
             uint64 exp,
             uint256 nextBreedTime,
-            bytes32 name
+            bytes32 name,
+            PenguunGender gender
         )
     {
         Penguun storage penguun = penguuns[_penguunId];
@@ -91,6 +78,7 @@ contract PenguunCore is ERC721Enumerable {
         exp = penguun.exp;
         nextBreedTime = penguun.nextBreedTime;
         name = penguun.name;
+        gender = penguun.gender;
     }
 
     /// @notice create a penguun using given argument
