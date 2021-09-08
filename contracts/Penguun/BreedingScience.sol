@@ -21,7 +21,8 @@ contract BreedingScience is Initializable, Ownable {
         dnaRarityCount[5] = [14, 11, 6, 3]; //eyes
         dnaRarityCount[6] = [10, 6, 5, 2]; //mouth
         dnaRarityCount[7] = [12, 1, 1, 2]; //bow
-        dnaRarityCount[5] = [20, 13, 10, 5]; //horn
+        dnaRarityCount[8] = [20, 13, 10, 5]; //horn
+        dnaRarityCount[8] = [20, 13, 10, 5]; //horn
     }
 
     ///// Simply a boolean to indicate this is the contract we expect to be (why? idk, just saw cryptokitty do this: https://gist.github.com/arpit/071e54b95a81d13cb29681407680794f)

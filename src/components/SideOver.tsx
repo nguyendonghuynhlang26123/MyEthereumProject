@@ -7,7 +7,6 @@ import { addressTrimMiddle } from '../utils';
 
 export function SideOver({ open, setOpen, children }) {
   const { account, balance, faucetContract, web3, reloadAccount } = useContext(Context);
-  console.log('log ~ file: SideOver.tsx ~ line 10 ~ SideOver ~ faucetContract', faucetContract);
   function fallbackCopyTextToClipboard(text) {
     var textArea = document.createElement('textarea');
     textArea.value = text;
@@ -53,7 +52,6 @@ export function SideOver({ open, setOpen, children }) {
       .withdraw(web3.utils.toWei('5', 'ether'))
       .send({ from: account })
       .then((res) => {
-        console.log('log ~ file: SideOver.tsx ~ line 56 ~ .then ~ res', res);
         if (reloadAccount) reloadAccount();
         alert('Operation succeeeded!');
       });

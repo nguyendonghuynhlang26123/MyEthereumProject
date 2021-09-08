@@ -28,13 +28,9 @@ export const PenguunImg = ({ isHatched = true, dna, className, ...props }) => {
       mutable = false;
     };
   }, []);
-  return (
-    <LazyLoad>
-      {isHatched ? (
-        <img {...props} src={img} className={`${className} ${blur ? ' filter blur-lg' : ''}`} />
-      ) : (
-        <img {...props} src={Egg} className={`${className}`} />
-      )}
-    </LazyLoad>
+  return isHatched ? (
+    <img {...props} src={img} className={`${className} ${blur ? ' filter blur-lg' : ''}`} />
+  ) : (
+    <img {...props} src={Egg} className={`${className}`} />
   );
 };

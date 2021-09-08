@@ -9,7 +9,7 @@ contract PenguunCore is ERC721Enumerable {
         BISEX
     }
     struct Penguun {
-        uint256 dna;
+        uint256 dna;  
         uint256 generation;
         uint256 hatchedAt;
         uint256 nextBreedTime;

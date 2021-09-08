@@ -73,7 +73,6 @@ const dnaToParts = async (dna) => {
   const data = {};
   layersOrder.forEach((layer, index) => {
     data[layer] = getPartInfo(layer, dnaParts[index]);
-    delete data[layer].type;
   });
   return data;
 };

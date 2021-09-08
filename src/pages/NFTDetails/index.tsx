@@ -9,6 +9,7 @@ import { Breeding } from './Breeding';
 import { Selling } from './Selling';
 import { compare2Account } from '../../utils';
 import { TagIcon } from '@heroicons/react/outline';
+import { Gifting } from './Gifting';
 
 export const NFTDetails = () => {
   const { penguunId } = useParams();
@@ -167,6 +168,9 @@ export const NFTDetails = () => {
             </Route>
             <Route exact path={`/penguuns/${penguunId}/selling`}>
               <Selling penguun={penguun} />
+            </Route>
+            <Route exact path={`/penguuns/${penguunId}/gifting`}>
+              <Gifting penguun={penguun} />
             </Route>
             <Route exact path={`/penguuns/${penguunId}`}>
               <Redirect to={`/penguuns/${penguunId}/info`} />

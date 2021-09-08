@@ -5,6 +5,7 @@ import { networkId } from '../../utils/constants';
 import { penguunAbi, penguunAddress } from '../contracts/Penguun.contract';
 import { faucetAbi, faucetAddress } from '../contracts/Faucet.contract';
 import { marketAbi, marketAddress } from '../contracts/Marketplace.contract';
+import { erc20Abi, erc20Address } from '../contracts/erc20.contract';
 
 export type PropsType = {
   web3: Web3;
@@ -83,6 +84,7 @@ export const Provider = ({ children }) => {
     const contract = new web3.eth.Contract(penguunAbi, penguunAddress);
     const faucet = new web3.eth.Contract(faucetAbi, faucetAddress);
     const market = new web3.eth.Contract(marketAbi, marketAddress);
+    const erc20Contract = new web3.eth.Contract(erc20Abi, erc20Address);
 
     setState((prev) => ({
       ...prev,
@@ -92,6 +94,7 @@ export const Provider = ({ children }) => {
       web3: web3,
       nftContract: contract,
       faucetContract: faucet,
+      erc20Contract: erc20Contract,
       marketContract: market,
       reloadAccount: () => {
         web3.eth.getBalance(accounts[0]).then((result) => {

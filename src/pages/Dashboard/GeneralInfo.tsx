@@ -22,8 +22,8 @@ export const GeneralInfo = ({ myBalance, myNFTs, myLHC }) => {
                 <p className="text-md text-gray-700 dark:text-white ml-2 font-semibold border-b border-gray-200">Current LHC balance</p>
               </div>
               <div className="border-b border-gray-200 mt-6 md:mt-0 text-black dark:text-white font-bold text-xl">
-                500
-                <span className="text-xs text-gray-400">/100</span>
+                {myNFTs ?? 0}
+                <span className="text-xs text-gray-400">/1000</span>
               </div>
             </div>
             <div className="w-full h-3 bg-gray-100">
@@ -35,7 +35,7 @@ export const GeneralInfo = ({ myBalance, myNFTs, myLHC }) => {
       <div className="flex items-center w-full md:w-1/2 space-x-4">
         <div className="w-1/2">
           <div className="shadow-lg px-4 py-6 w-full bg-white dark:bg-gray-700 relative">
-            <p className="text-2xl text-black dark:text-white font-bold">{myNFTs.length ?? 0}</p>
+            <p className="text-2xl text-black dark:text-white font-bold">{myNFTs ?? 0}</p>
             <p className="text-gray-400 text-sm">Your NFTs</p>
           </div>
         </div>

@@ -33,7 +33,7 @@ export const NftInfo = ({ penguun }) => {
       //Load Body parts
       dnaToParts(penguun.dna).then((data) => {
         setParts(data);
-        console.log(data);
+        console.log('log ~ file: NftInfo.tsx ~ line 36 ~ dnaToParts ~ data', data);
       });
 
       console.log('Can breed at ' + Number(penguun.nextBreedTime) * 1000);
@@ -193,8 +193,8 @@ export const NftInfo = ({ penguun }) => {
                 <div key={p} className="flex flex-row items-center gap-2 overflow-clip">
                   <img className="h-12 w-12 rounded-md" src={partIcons[p]} alt="" />
                   <span className="w-full">
-                    <p className="text-md font-bold capitalize truncate ">{p == 'bg' ? 'Background' : p == 'belly' ? 'Belly' : parts[p].partName}</p>
-                    <p className={`text-sm capitalize inline px-3 rounded-md ${getStyleByRarity(parts[p].rarity)}`}>{parts[p].rarity}</p>
+                    <p className="text-md font-bold capitalize truncate ">{p == 'bg' ? 'Background' : p == 'belly' ? 'Belly' : parts[p]?.partName}</p>
+                    <p className={`text-sm capitalize inline px-3 rounded-md ${getStyleByRarity(parts[p]?.rarity)}`}>{parts[p]?.rarity}</p>
                   </span>
                 </div>
               ))}

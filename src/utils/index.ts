@@ -4,5 +4,6 @@ export const addressTrimMiddle = (s: string) => {
 };
 
 export const compare2Account = (s: string, t: string) => {
+  if (s == null || t == null) return false;
   return s.toLowerCase() == t.toLowerCase();
 };
