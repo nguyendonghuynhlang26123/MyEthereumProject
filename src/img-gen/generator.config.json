@@ -59,10 +59,10 @@
       "legendary": 3
     },
     "fur": {
-      "total": 11,
-      "common": 20,
-      "rare": 0,
-      "epic": 0,
+      "total": 22,
+      "common": 10,
+      "rare": 7,
+      "epic": 4,
       "legendary": 1
     },
     "horn": {
@@ -855,69 +855,135 @@
     "fur": [
       {
         "type": "fur",
-        "rarity": "legendary",
+        "rarity": "Legendary",
         "partId": "90",
         "partName": "Elizabeth fur"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "0",
         "partName": "Blue"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "1",
         "partName": "Cyan"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "2",
         "partName": "grey"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "3",
         "partName": "green"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "4",
         "partName": "orange"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "5",
         "partName": "pinky"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "6",
         "partName": "purple"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "7",
         "partName": "red"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "8",
         "partName": "teal"
       },
       {
         "type": "fur",
-        "rarity": "common",
+        "rarity": "Common",
         "partId": "9",
         "partName": "yellow"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "40",
+        "partName": "white green"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "41",
+        "partName": "yellow green"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "42",
+        "partName": "gradient blue"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "43",
+        "partName": "fire red"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "44",
+        "partName": "smooth green"
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "45",
+        "partName": "sky "
+      },
+      {
+        "type": "fur",
+        "rarity": "Rare",
+        "partId": "46",
+        "partName": "darkness"
+      },
+      {
+        "type": "fur",
+        "rarity": "Epic",
+        "partId": "70",
+        "partName": "cutting edge"
+      },
+      {
+        "type": "fur",
+        "rarity": "Epic",
+        "partId": "71",
+        "partName": "red tail"
+      },
+      {
+        "type": "fur",
+        "rarity": "Epic",
+        "partId": "72",
+        "partName": "half blue"
+      },
+      {
+        "type": "fur",
+        "rarity": "Epic",
+        "partId": "9",
+        "partName": "elizabeth sick"
       }
     ],
     "horn": [

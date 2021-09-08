@@ -53,7 +53,10 @@ module.exports = {
   },
   variants: {
     animation: ['responsive', 'motion-safe', 'motion-reduce'],
-    extend: {},
+    extend: {
+      backgroundColor: ['checked'],
+      borderColor: ['checked'],
+    },
   },
   plugins: [require('@tailwindcss/aspect-ratio')],
 };

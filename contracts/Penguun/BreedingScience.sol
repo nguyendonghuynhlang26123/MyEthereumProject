@@ -6,11 +6,22 @@ import "../dependencies/Initializable.sol";
 contract BreedingScience is Initializable, Ownable {
     uint8 mutationPercent;
     uint256 randNonce; // TODO: Replace random function by an oracle
+    mapping(uint256 => uint256[]) dnaRarityCount; // Number of [common, rare, epic, legendary] img sprites for each parts
 
     function initialize(uint8 _mutationPercent) public initializer {
         require(_mutationPercent <= 100 && _mutationPercent >= 0);
         mutationPercent = _mutationPercent;
         randNonce = 0;
+
+        dnaRarityCount[0] = [17, 11, 8, 3]; //bg
+        dnaRarityCount[1] = [19, 13, 10, 6]; //back
+        dnaRarityCount[2] = [20, 13, 10, 4]; //tail
+        dnaRarityCount[3] = [10, 7, 4, 1]; //fur
+        dnaRarityCount[4] = [4, 3, 2, 3]; //belly
+        dnaRarityCount[5] = [14, 11, 6, 3]; //eyes
+        dnaRarityCount[6] = [10, 6, 5, 2]; //mouth
+        dnaRarityCount[7] = [12, 1, 1, 2]; //bow
+        dnaRarityCount[5] = [20, 13, 10, 5]; //horn
     }
 
     ///// Simply a boolean to indicate this is the contract we expect to be (why? idk, just saw cryptokitty do this: https://gist.github.com/arpit/071e54b95a81d13cb29681407680794f)
@@ -129,6 +140,24 @@ contract BreedingScience is Initializable, Ownable {
         return resultParts;
     }
 
+    /// @notice since our sprite sheets are limited, therefore we need to restrict to match our img sheets
+    function restricDnaPart(uint256 dnaPart, uint256 indexInDna)
+        public
+        view
+        returns (uint256 result)
+    {
+        if (dnaPart > 90) {
+            //Legendary part
+            result = (dnaPart % dnaRarityCount[indexInDna][3]) + 90;
+        } else if (dnaPart > 70) {
+            result = (dnaPart % dnaRarityCount[indexInDna][2]) + 70;
+        } else if (dnaPart > 40) {
+            result = (dnaPart % dnaRarityCount[indexInDna][1]) + 40;
+        } else {
+            result = dnaPart % dnaRarityCount[indexInDna][0];
+        }
+    }
+
     /// @notice This function is an utility function that implement "Mutation" in GA
     /// @param dnaParts dna elements array
     function _mutate(uint256[] memory dnaParts)
@@ -142,6 +171,10 @@ contract BreedingScience is Initializable, Ownable {
         uint256 temp = dnaParts[idx1];
         dnaParts[idx1] = dnaParts[idx2];
         dnaParts[idx2] = temp;
+
+        //Restrict that swapped element dnaPart (Because we don't have too many imgage sprites for each part so it is neccessary to restrict this)
+        dnaParts[idx1] = restricDnaPart(dnaParts[idx1], idx1);
+        dnaParts[idx2] = restricDnaPart(dnaParts[idx2], idx1);
 
         return dnaParts;
     }

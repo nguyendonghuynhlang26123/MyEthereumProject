@@ -16,7 +16,7 @@ export type SidebarProps = {
 
 export const Sidebar = ({ items, currentIndex = 0, open }: SidebarProps) => {
   return (
-    <div className={`h-screen shadow-md relative w-80 bg-white dark:bg-gray-700 ${open ? 'block ' : 'hidden lg:block'}`}>
+    <div className={`h-screen shadow-md relative w-80 bg-white dark:bg-gray-700 ${open ? 'block ' : 'hidden'}`}>
       <div className="flex items-center justify-start pt-4 ml-8">
         <p className="font-bold dark:text-white text-2xl leading-4 flex flex-row justify-between items-center py-2 logo">
           My

@@ -3,6 +3,8 @@ pragma solidity ^0.8.0;
 import "./PenguunBreeding.sol";
 
 contract Penguun is PenguunBreeding {
+    address marketplaceContract;
+
     function initialize(address _address, address _owner)
         public
         override
@@ -26,5 +28,25 @@ contract Penguun is PenguunBreeding {
 
     function setTestMode(bool value) public onlyOwner {
         debugMode = value;
+    }
+
+    function setVariables(
+        uint8 _breedLim,
+        uint64 _expLim,
+        uint64 _expGain,
+        uint256 _defReadyTime
+    ) public onlyOwner {
+        //LIMITER
+        breedCountLimit = _breedLim;
+        expLimit = _expLim; // Maximum exp a penguun can gain
+        expPerBreedCount = _expGain; // Maximum exp a penguun can gain
+        defaultReadyTime = _defReadyTime; // When will a baby able to breed
+    }
+
+    function setMarketplaceContract(address _address) public onlyOwner {
+        setApprovalForAll(marketplaceContract, false); //Set previous contract to false
+
+        marketplaceContract = _address;
+        setApprovalForAll(marketplaceContract, true);
     }
 }

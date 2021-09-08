@@ -3,7 +3,7 @@ pragma solidity ^0.8.0;
 import "./Initializable.sol";
 
 abstract contract Ownable is Initializable {
-    address private _owner;
+    address internal _owner;
 
     event OwnershipTransferred(
         address indexed previousOwner,

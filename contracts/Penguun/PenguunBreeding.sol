@@ -70,7 +70,7 @@ contract PenguunBreeding is PenguunCore, Ownable {
 
         penguuns.push(Penguun(0, 0, 0, 0, 0, 0, 0, 0, "", PenguunGender.BISEX)); //Void penguun
 
-        //Ancestors: 4 legendary penguuns
+        //Ancestors: 10 legendary penguuns
         _createPenguun(
             909190909090909090,
             0,
@@ -104,8 +104,62 @@ contract PenguunBreeding is PenguunCore, Ownable {
             0,
             0,
             "Stella",
-            PenguunGender.MALE,
+            PenguunGender.FEMALE,
             _owner
+        );
+        _createPenguun(
+            37006124005457571,
+            0,
+            0,
+            0,
+            "Rebecca",
+            PenguunGender.FEMALE,
+            msg.sender
+        );
+        _createPenguun(
+            774005067103030644,
+            0,
+            0,
+            0,
+            "Ali",
+            PenguunGender.MALE,
+            msg.sender
+        );
+        _createPenguun(
+            44040700173764047,
+            0,
+            0,
+            0,
+            "ELEL",
+            PenguunGender.BISEX,
+            msg.sender
+        );
+        _createPenguun(
+            527071734270444704,
+            0,
+            0,
+            0,
+            "Rolli",
+            PenguunGender.MALE,
+            msg.sender
+        );
+        _createPenguun(
+            520672720072164140,
+            0,
+            0,
+            0,
+            "Kara",
+            PenguunGender.FEMALE,
+            msg.sender
+        );
+        _createPenguun(
+            710773064204431348,
+            0,
+            0,
+            0,
+            "Arche",
+            PenguunGender.FEMALE,
+            msg.sender
         );
     }
 
@@ -233,11 +287,15 @@ contract PenguunBreeding is PenguunCore, Ownable {
             _owner
         );
 
-        // Trigger the cooldown for both parents.
+        // Trigger the breeding cooldown for both parents.
         _triggerCooldown(papa);
         _triggerCooldown(mama);
+        // Increase exp
         mama.exp += expPerBreedCount * breedCountSum;
         papa.exp += expPerBreedCount * breedCountSum;
+        // Increase breed count
+        papa.breedCount++;
+        mama.breedCount++;
 
         emit BreedingEvent(_maleId, _femaleId, penguunId);
     }

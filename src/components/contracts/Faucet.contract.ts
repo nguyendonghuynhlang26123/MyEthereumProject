@@ -1,5 +1,5 @@
 import { AbiItem } from 'web3-utils';
-export const faucetAddress = '0x32F0AF922cD619c09F026ba6402f8DC37faCa2C2';
+export const faucetAddress = '0x532F646B0cF4BDB82e034F50bA45fb026392E2aa';
 
 export const faucetAbi: AbiItem[] = [
   {

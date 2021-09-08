@@ -4,9 +4,11 @@ import NotFound from '../../assets/notfound.png';
 import { BreedingChoosingModal } from './BreedingChoosingModal';
 import { HeartIcon } from '@heroicons/react/solid';
 import { Context } from '../../components/contexts/ContractDataContext';
+import { useHistory } from 'react-router-dom';
 
 export const Breeding = ({ penguun }) => {
   const { web3, nftContract, account, setLoading } = React.useContext(Context);
+  const history = useHistory();
   const [matePenguun, setPenguun] = React.useState(null);
   const [modal, showModal] = React.useState(false);
   const [childName, setChildName] = React.useState('');
@@ -50,6 +52,7 @@ export const Breeding = ({ penguun }) => {
               breedingHandle().then((result) => {
                 console.log(result);
                 alert('Breeding successfully');
+                history.push('/my-nft');
               });
             }}
             className=" py-2 px-4 bg-pink-600 text-white rounded-md "

@@ -1,9 +1,6 @@
 import firebase from 'firebase/app';
 import 'firebase/storage';
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: 'AIzaSyD4Rfc6rQ3yjUOmk01SAxqtiCp81vclX2w',
@@ -19,7 +16,9 @@ const app = firebase.initializeApp(firebaseConfig);
 // const storage = getStorage(app);
 
 const storageRef = firebase.storage().ref();
-const getImg = async (path) => {
-  return storageRef.child(path).getDownloadURL();
+const getImg = async (dna) => {
+  const rs = await fetch(`http://localhost:4000/getSrc/${dna}`, { mode: 'no-cors' }); //Just wait for this function to upload generated img
+
+  return storageRef.child(`images/${dna}.png`).getDownloadURL();
 };
 export { getImg };

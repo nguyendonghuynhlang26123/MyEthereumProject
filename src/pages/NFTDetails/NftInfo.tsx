@@ -36,19 +36,36 @@ export const NftInfo = ({ penguun }) => {
         console.log(data);
       });
 
+      console.log('Can breed at ' + Number(penguun.nextBreedTime) * 1000);
+      console.log('Hatch at ' + Number(penguun.hatchedAt) * 1000);
+
       //Load parents
       if (penguun.papaId != '0' && penguun.mamaId != '0') {
         nftContract.methods
           .getPenguun(penguun.papaId)
           .call({ from: account })
           .then((papa) => {
-            setParents((prv) => ({ ...prv, papa: papa }));
+            setParents((prv) => ({
+              ...prv,
+              papa: {
+                ...papa,
+                id: penguun.papaId,
+                name: web3.utils.toAscii(papa.name),
+              },
+            }));
           });
         nftContract.methods
           .getPenguun(penguun.mamaId)
           .call({ from: account })
           .then((mama) => {
-            setParents((prv) => ({ ...prv, mama: mama }));
+            setParents((prv) => ({
+              ...prv,
+              mama: {
+                ...mama,
+                id: penguun.mamaId,
+                name: web3.utils.toAscii(mama.name),
+              },
+            }));
           });
       }
     }
@@ -69,10 +86,23 @@ export const NftInfo = ({ penguun }) => {
       ? 'bg-blue-500 text-white'
       : 'bg-gray-500 text-white';
   };
-  console.log(Number(penguun.nextBreedTime) * 1000);
 
   // Renderer callback with condition
   const breedStatus = ({ hours, minutes, seconds, completed }) => {
+    if (completed) {
+      // Render a completed state
+      return <p>Breedable</p>;
+    } else {
+      // Render a countdown
+      return (
+        <span>
+          {hours}:{minutes}:{seconds}
+        </span>
+      );
+    }
+  };
+
+  const hatchAtStatus = ({ hours, minutes, seconds, completed }) => {
     if (completed) {
       // Render a completed state
       return <p>Breedable</p>;

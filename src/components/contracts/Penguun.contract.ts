@@ -1,5 +1,5 @@
 import { AbiItem } from 'web3-utils';
-export const penguunAddress = '0x126E296Fb47BB0F3bFbFa2f3368F17e792cB46F8';
+export const penguunAddress = '0xaa03D09B498aB467005b9c5d1f846060F940b62E';
 
 export const penguunAbi: AbiItem[] = [
   {

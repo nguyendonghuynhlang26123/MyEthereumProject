@@ -1,22 +1,40 @@
 import React from 'react';
 import NotFound from '../assets/notfound.png';
+import Egg from '../assets/egg.png';
+import LazyLoad from 'react-lazyload';
 import { getImg } from '../firebase';
 
-export const PenguunImg = ({ dna, className, ...props }) => {
+export const PenguunImg = ({ isHatched = true, dna, className, ...props }) => {
   const [img, setImg] = React.useState(NotFound);
   const [blur, setBlur] = React.useState(true);
 
   React.useEffect(() => {
-    getImg(`images/${dna}.png`)
+    let mutable = true;
+    getImg(dna)
       .then((url) => {
-        setImg(url);
-        setBlur(false);
+        if (mutable) {
+          setImg(url);
+          setBlur(false);
+        }
       })
       .catch((err) => {
         console.log(`Cannot find image for ${dna} `);
-        setImg(NotFound);
-        setBlur(false);
+        if (mutable) {
+          setImg(NotFound);
+          setBlur(false);
+        }
       });
+    return () => {
+      mutable = false;
+    };
   }, []);
-  return <img {...props} src={img} className={`${className} ${blur ? ' filter blur-lg' : ''}`} />;
+  return (
+    <LazyLoad>
+      {isHatched ? (
+        <img {...props} src={img} className={`${className} ${blur ? ' filter blur-lg' : ''}`} />
+      ) : (
+        <img {...props} src={Egg} className={`${className}`} />
+      )}
+    </LazyLoad>
+  );
 };

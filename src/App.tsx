@@ -4,8 +4,9 @@ import { Dashboard, NFTPage } from './pages';
 import { Navbar, Sidebar } from './components';
 import { HomeIcon, InboxInIcon, LibraryIcon } from '@heroicons/react/outline';
 import * as ContractContext from './components/contexts/ContractDataContext';
-import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route, Link, Redirect, useLocation } from 'react-router-dom';
 import { NFTDetails } from './pages/NFTDetails';
+import { Market } from './pages/Marketplace';
 
 declare global {
   interface Window {
@@ -60,6 +61,9 @@ export const App = () => {
                 </Route>
                 <Route path="/my-nft">
                   <NFTPage />
+                </Route>
+                <Route path="/marketplace">
+                  <Market />
                 </Route>
                 <Route path="/penguuns/:penguunId">
                   <NFTDetails />
